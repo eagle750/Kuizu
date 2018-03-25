@@ -180,6 +180,28 @@ public class MainActivity extends AppCompatActivity {
         button3.setText(Integer.toString(answers.get(3)));
     }
 
+    public void chooseAnswer(View view)
+    {
+        if(view.getTag().toString().equals(Integer.toString(locationOfCorrectAnswer)))
+        {
+            score++;
+            resultTextView.setText("Correct!");
+        }
+        else
+        {
+            resultTextView.setText("Wrong!");
+        }
+        numberOfQuestions++;
+        pointsTextView.setText(Integer.toString(score) + "/" +Integer.toString(numberOfQuestions));
+        generateQuestion();
+    }
+    public void start(View view) {
+        startButton.setVisibility(View.INVISIBLE);
+        gameRelativeLayout.setVisibility(RelativeLayout.VISIBLE);
+        playAgain(findViewById(R.id.playAgainButton));
+
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
