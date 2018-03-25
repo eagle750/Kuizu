@@ -208,5 +208,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        startButton = (Button) findViewById(R.id.startButton);
+        sumTextView = (TextView) findViewById(R.id.sumTextView);
+        button0=(Button)findViewById(R.id.button0);
+        button1=(Button)findViewById(R.id.button1);
+        button2=(Button)findViewById(R.id.button2);
+        button3=(Button)findViewById(R.id.button3);
+        resultTextView=(TextView)findViewById(R.id.resultTextView);
+        pointsTextView=(TextView)findViewById(R.id.pointsTextView);
+        timerTextView=(TextView)findViewById(R.id.timerTextView);
+        playAgainButton=(Button)findViewById(R.id.playAgainButton);
+        gridLayout=(GridLayout)findViewById(R.id.gridLayout);
+        gameRelativeLayout=(RelativeLayout)findViewById(R.id.gameRelativeLayout);
     }
 }
